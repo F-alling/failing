@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- HTML Codes by Quackit.com -->
 <title>
 Fallings site.</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=6">
 <meta name="keywords" content="falling, fallings page, __falling, falling2918,  falling_enity">
 <meta name="description" content="Fallings website.">
 <style>
 body {background-color:#ffffff;background-repeat:no-repeat;background-position:bottom left;background-attachment:fixed;}
-h1{text-align:center;font-family:Arial, sans-serif;color:#000000;background-color:#ffffff;}
-p {text-align:center;font-family:Georgia, serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
-</style>
+h1{text-align:center;font-family:Arial, sans-serif;}
+p {text-align:center;font-family:Georgia, serif;font-size:36px;font-style:normal;font-weight:normal;}
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+ 
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+ 
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+    </style>
 </head>
+ 
 <body>
 <h1>Welcome. </h1>
 <p>This website is currently not finished this is just temporary till I someday I work on it.</p>
+
+
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+        function darkMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "dark-mode";
+            content.innerText = "Dark Mode is ON";
+        }
+        function lightMode() {
+            let element = document.body;
+            let content = document.getElementById("DarkModetext");
+            element.className = "light-mode";
+            content.innerText = "Dark Mode is OFF";
+        }
+    </script>
 </body>
 </html>
