@@ -95,12 +95,15 @@
 
 .u-section-1 .u-btn-5 {
   font-size: 3rem;
+  line-height: 1;
   padding: 0;
 }
 
 .u-section-1 .u-btn-6 {
-  font-size: 3rem;
-  margin: 15px auto 60px 483px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 57px auto 39px 479px;
   padding: 0;
 }
 
@@ -138,7 +141,8 @@
   }
 
   .u-section-1 .u-btn-6 {
-    margin-left: 283px;
+    font-size: 2.9375rem;
+    margin-left: 279px;
   }
 }
 
@@ -184,7 +188,7 @@
   }
 
   .u-section-1 .u-btn-6 {
-    margin-left: 63px;
+    margin-left: 59px;
   }
 }
 
