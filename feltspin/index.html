@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #nameInput {
+            width: 300px;
+            height: 150px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        #pickButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Random Name Picker</h1>
+<textarea id="nameInput" placeholder="Enter names, one per line..."></textarea><br>
+<button id="pickButton">Pick a Name!</button>
+<h2 id="result"></h2>
+
+<script>
+    document.getElementById('pickButton').addEventListener('click', () => {
+        const inputText = document.getElementById('nameInput').value;
+        const names = inputText.split('\n').map(name => name.trim()).filter(name => name); // Split by line and trim whitespace
+
+        if (names.length === 0) {
+            alert("Please enter at least one name.");
+            return;
+        }
+
+        // Disable the button and clear the result
+        document.getElementById('pickButton').disabled = true;
+        document.getElementById('result').innerText = "Picking a name...";
+
+        setTimeout(() => {
+            const randomIndex = Math.floor(Math.random() * names.length);
+            document.getElementById('result').innerText = `You picked: ${names[randomIndex]}`;
+            document.getElementById('pickButton').disabled = false; // Re-enable the button
+        }, 5000); // Wait for 5 seconds
+    });
+</script>
+
+</body>
+</html>
