@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes/No Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+        }
+        #response {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Yes/No Bot</h1>
+    <input type="text" id="question" placeholder="Ask your question here...">
+    <button onclick="getResponse()">Ask</button>
+
+    <div id="response"></div>
+
+    <script>
+        function getResponse() {
+            const question = document.getElementById('question').value;
+            if (question.trim() === '') {
+                document.getElementById('response').innerText = "Please ask a question!";
+                return;
+            }
+            const answer = Math.random() < 0.5 ? 'Yes' : 'No';
+            document.getElementById('response').innerText = answer;
+        }
+    </script>
+
+</body>
+</html>
